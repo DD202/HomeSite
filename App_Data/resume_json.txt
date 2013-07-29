@@ -1,0 +1,257 @@
+{
+   "firstName":"Dom",
+   "lastName":"DeMaio",
+   "email":"dldemaio@metlife.com",
+   "address":{
+      "streetAddress":"2200 W 29th Ave, Apt 205",
+      "city":"Denver",
+      "state":"CO",
+      "postalCode":"80211"
+   },
+   "phoneNumber":[
+      {
+         "type":"mobile",
+         "number":"7322616587"
+      },
+      {
+         "type":"work",
+         "number":"3036723232"
+      }
+   ],
+   "professionalExperience":{
+      "jobs":[
+         {
+            "jobTitle":"Information Systems Consultant",
+            "address":{
+               "city":"Greenwood Village",
+               "state":"CO"
+            },
+            "company":"MetLife",
+            "startDate":"06/01/2012",
+            "endDate":null,
+            "keyContributions":[
+               {
+                  "type":"Innovation",
+                  "description":"Selected as a key contributor in an effort to reinstate a dedicated human factors team"
+               },
+               {
+                  "type":"Innovation",
+                  "description":"Key member of collaborative sessions with business partners to create prototypes of the future state of SmartApp using iRise"
+               },
+               {
+                  "type":"Increase Efficiency",
+                  "description":"Recognized areas for improvement and implemented a Continuous Integration process for development environments",
+                  "benefit":"Eliminates 3-5 hours per week of manual tasks for developers"
+               },
+               {
+                  "type":"Increase Efficiency",
+                  "description":"Eliminated redundant post implementation check out tasks by creating diagnostics checks for key applications",
+                  "benefit":"Reduce smoke-test time on release nights"
+               },
+               {
+                  "type":"Increase Quality",
+                  "description":"Supervise the work of peers and offshore resources to ensure consistent coding practices"
+               },
+               {
+                  "type":"Reduce Cost",
+                  "description":"Collaborated with peers on State Approvals proof of concept to eliminate repetitive quarterly projects. Developed working model and presented to IT and Business management",
+                  "benefit":"Opportunity to eliminate up to $1 million in annual project costs"
+               },
+               {
+                  "type":"Support Culture",
+                  "description":"Identify opportunities to improve technical knowledge amongst peers by recommending reading materials and key topics"
+               },
+               {
+                  "type":"Support Culture",
+                  "description":"Support additional project teams in identifying solutions to meet the business needs while maintaining consistency across applications"
+               }
+            ]
+         },
+         {
+            "jobTitle":"Systems Analyst",
+            "address":{
+               "city":"Greenwood Village",
+               "state":"CO"
+            },
+            "company":"MetLife",
+            "startDate":"02/01/2009",
+            "endDate":"06/01/2012",
+            "keyContributions":[
+               {
+                  "type":"General",
+                  "description":"Designed and implemented new application from the ground up to allow our business to trigger ad hoc jobs for daily accounting processes while eliminating an unreliable legacy system"
+               },
+               {
+                  "type":"General",
+                  "description":"Reduced production downtime and the time needed to restore service through  the EAS Replatform initiative and enhanced monitoring of SmartApp web services"
+               },
+               {
+                  "type":"General",
+                  "description":"Implemented customer centric solutions to improve the call center experience"
+               },
+               {
+                  "type":"General",
+                  "description":"Identified areas to eliminate technical debt within SmartApp correspondence systems"
+               },
+               {
+                  "type":"General",
+                  "description":"Implemented systems that reduce the business dependency on IT to make business rule changes"
+               },
+               {
+                  "type":"general",
+                  "description":"Collaborated with a small group of peers to introduce development standards for database changes which eliminated project collisions and implementation issues that previously resulted from poor script managementt"
+               }
+            ]
+         },
+         {
+            "jobTitle":"IT Rotational Program",
+            "address":{
+               "city":"Various Locations"
+            },
+            "company":"MetLife",
+            "startDate":"06/04/2007",
+            "endDate":"02/01/2009",
+            "description":"This was a 20 month program that consisted of 5 rotations through key disciplines within what was formally known as IBIT. It was designed to groom recent college graduates for IT and Management positions by providing experience and insight into the various IT disciplines.",
+            "keyContributions":[
+               {
+                  "division":"IBIT, CAS & ITAC",
+                  "jobTitle":"Business Systems Analyst",
+                  "type":"General",
+                  "description":"Participated in early discussions of CAS portion of the Compliance Triple Crown Initiative"
+               },
+               {
+                  "division":"Enterprise Monitoring, ECAP",
+                  "jobTitle":"Systems Management Engineer",
+                  "type":"General",
+                  "description":"Managed the Real User Monitor (RUM) application on-boarding process for over 25 company wide applications"
+               },
+               {
+                  "division":"Enterprise Monitoring, ECAP",
+                  "jobTitle":"Systems Management Engineer",
+                  "type":"General",
+                  "description":"Assisted production support teams to correctly interpret monitoring reports to help isolate slow response time complaints"
+               },
+               {
+                  "division":"Enterprise Monitoring, ECAP",
+                  "jobTitle":"Systems Management Engineer",
+                  "type":"General",
+                  "description":"Analyzed the existing Monitoring Requirements Gathering process and applied skills gained in other rotations to streamline the process"
+               },
+               {
+                  "division":"IBIT, Annuities",
+                  "jobTitle":"Application Developer",
+                  "type":"General",
+                  "description":"Converted VB6 applications (ACATS, DAC Extract, Role Change, Special Programs) to C# .NET while reducing redundant code and incorporating fixes for the identified bugs/defects "
+               },
+               {
+                  "division":"IBIT, Broker Dealer",
+                  "jobTitle":"Quality Assurance Analyst",
+                  "type":"General",
+                  "description":"Acted as QA Lead for Manually Entered Transactions project for all QA aspects including test planning, test scripting, test execution, defect management, project meetings, & UAT coordination"
+               },
+               {
+                  "division":"IBIT, Broker Dealer",
+                  "jobTitle":"Quality Assurance Analyst",
+                  "type":"General",
+                  "description":"Participated in meetings with vendors to accurately explain and demonstrate functionality issues with their products to ensure that showstopper defects for the Straight-Thru-Processing initiative would be addressed properly"
+               },
+               {
+                  "division":"IBIT, Broker Dealer",
+                  "jobTitle":"Quality Assurance Analyst",
+                  "type":"General",
+                  "description":"Reduced the amount of time needed for regression testing by automating testing scripts in Quick Test Pro"
+               },
+               {
+                  "division":"Institutional IT, Corporate Benefit Funding",
+                  "jobTitle":"Business Systems Analyst",
+                  "type":"General",
+                  "description":"Analyzed  application impacts of various strategic initiatives such as SDI and LiveLink Hardening and coordinated the necessary changes to keep all environments operating and minimize impact to our project plan"
+               }
+            ]
+         },
+         {
+            "jobTitle":"Intranet Web Design Intern",
+            "address":{
+               "city":"Somerset",
+               "state":"NJ"
+            },
+            "company":"Trane Heating & Cooling",
+            "startDate":"01/05/2007",
+            "endDate":"05/20/2007",
+            "keyContributions":[
+               {
+                  "type":"General",
+                  "description":"Re-designed intranet site sales and field representatives"
+               },
+               {
+                  "type":"General",
+                  "description":"Developed reusable templates, utilizing stle sheets to maintain consistent look and feel"
+               }
+            ]
+         },
+         {
+            "jobTitle":"Trail Desiginer & Part Time Operations Manager",
+            "address":{
+               "city":"Vernon",
+               "state":"NJ"
+            },
+            "company":"Diablo Freeride Park",
+            "startDate":"04/01/2004",
+            "endDate":"10/30/2006",
+            "keyContributions":[
+               {
+                  "type":"General",
+                  "description":"Managed daily operations, employees, and events"
+               }
+            ]
+         }
+      ],
+      "proficiencies":[
+        {"type":"Software", "description":"Visual Studio 2005, 2008, 2010, 2012, 2013"}, 
+{"type":"Software", "description":"SQL Server - 2005, 2008"},
+{"type":"Software", "description":"GITHub"},
+{"type":"Software", "description":"RedGate SQL Development Tools"},
+{"type":"Software", "description":"StarTeam"},
+{"type":"Software", "description":"Team Foundation Server"},
+{"type":"Software", "description":"Jenkins"},
+{"type":"Software", "description":"ASP.net"},
+{"type":"Language", "description":"C#"},
+{"type":"Technology", "description":"WCF Web Services"},
+{"type":"Language", "description":"jQuery"},
+{"type":"Technology", "description":"AJAX"},
+{"type":"Technology", "description":"MVC"}
+         
+      ],
+      "training":[
+         {
+		"name":"Managing IT Projects",
+		"description":"ESI Accredited course covering the critical success factors and risks inherent to IT projects, as well as managing the project plan, the team, and estimating project costs and schedules"
+         },
+ {
+		"name":"Establishing a Business Mindset",
+		"description":"ESI Accredited course covering the importance of developing the necessary business acumen to understand the implications when making business decisions"
+         }
+      ],
+      "awards":[
+         {
+		"description":"ITG Quarterly award winner for work on Annuity Host Conversion"
+         },
+ {
+		"description":"Recognized for exemplary work by peers nine times through the Global Technology Recognition program"
+         }
+      ]
+   },
+   "education":{
+	"college":{
+		"name":"Rutgers University, The State University of New Jersey",
+		"graduationDate":"05/2007",
+		"degree":"Bachelor of Arts",
+		"major":"Information Technology and Informatics",
+		"minor":"Economics",
+		"gpa":{
+			"major":3.86,
+			"cumulative":3.23
+			}
+	}
+   }
+}
