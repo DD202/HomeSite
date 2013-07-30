@@ -93,6 +93,7 @@ namespace DomDeMaioHomePage.Models
         {
             Address = new Address();
             Contributions = new List<Contribution>();
+            RotationalJobs = new List<RotationalJob>();
         }
         #endregion
 
@@ -105,7 +106,8 @@ namespace DomDeMaioHomePage.Models
         [DisplayFormat(DataFormatString = "{0:MMM yyyy}")]
         public DateTime? EndDate { get; set; }
         public string Description { get; set; }
-        public List<Contribution> Contributions { get; set; } 
+        public List<Contribution> Contributions { get; set; }
+        public List<RotationalJob> RotationalJobs { get; set; }
         #endregion
     }
 
@@ -157,5 +159,16 @@ namespace DomDeMaioHomePage.Models
         public string Minor { get; set; }
         public decimal? MajorGpa { get; set; }
         public decimal? CumulativeGpa { get; set; }
+    }
+
+    public class RotationalJob
+    {
+        public RotationalJob()
+        {
+            Contributions = new List<Contribution>();
+        }
+        public string JobTitle { get; set; }
+        public string Division { get; set; }
+        public List<Contribution> Contributions { get; set; }
     }
 }

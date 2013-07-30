@@ -33,39 +33,7 @@
         {
             <p class="text-warning"><small>@job.Description</small></p>
         }
-
-
-
-        if (!string.IsNullOrEmpty(job.Contributions[0].Division))
-        {
-            string previousContribution = string.Empty;
-            foreach (var contribution in job.Contributions)
-            {
-
-                if (!string.IsNullOrWhiteSpace(contribution.Division)
-                    && !previousContribution.Equals(contribution.Division))
-                {
-                    <small class="text-warning">@contribution.Division - @contribution.JobTitle</small>
-                    previousContribution = contribution.Division;
-
-                }
-                <ul>
-                    <li>
-                        <small> @contribution.Description</small>
-                        @if (!string.IsNullOrWhiteSpace(@contribution.Benefit))
-                        {
-                            <ul>
-                                <li>
-                                    <small>@contribution.Benefit</small>
-                                </li>
-                            </ul>
-                        }
-                    </li>
-                </ul>
-            }
-        }
-        else
-        {
+        
             <ul class="">
                 @foreach (var contribution in @job.Contributions)
                 {
@@ -84,8 +52,7 @@
                 }
             </ul>
         }
-    }
-    <hr />
+       <hr />
     <h3 id="proficiencies">
         Proficiencies, Training, &amp; Awards
     </h3>

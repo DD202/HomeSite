@@ -112,60 +112,72 @@
             "startDate":"06/04/2007",
             "endDate":"02/01/2009",
             "description":"This was a 20 month program that consisted of 5 rotations through key disciplines within what was formally known as IBIT. It was designed to groom recent college graduates for IT and Management positions by providing experience and insight into the various IT disciplines.",
-            "keyContributions":[
+            "rotationalJob":[
                {
+                  "jobTitle":"Business Systems Analyst",
                   "division":"IBIT, CAS & ITAC",
-                  "jobTitle":"Business Systems Analyst",
-                  "type":"General",
-                  "description":"Participated in early discussions of CAS portion of the Compliance Triple Crown Initiative"
+                  "keyContributions":[
+                     {
+                        "type":"General",
+                        "description":"Participated in early discussions of CAS portion of the Compliance Triple Crown Initiative"
+                     }
+                  ]
                },
                {
-                  "division":"Enterprise Monitoring, ECAP",
                   "jobTitle":"Systems Management Engineer",
-                  "type":"General",
-                  "description":"Managed the Real User Monitor (RUM) application on-boarding process for over 25 company wide applications"
-               },
-               {
                   "division":"Enterprise Monitoring, ECAP",
-                  "jobTitle":"Systems Management Engineer",
-                  "type":"General",
-                  "description":"Assisted production support teams to correctly interpret monitoring reports to help isolate slow response time complaints"
+                  "keyContributions":[
+                     {
+                        "type":"General",
+                        "description":"Managed the Real User Monitor (RUM) application on-boarding process for over 25 company wide applications"
+                     },
+                     {
+                        "type":"General",
+                        "description":"Assisted production support teams to correctly interpret monitoring reports to help isolate slow response time complaints"
+                     },
+                     {
+                        "type":"General",
+                        "description":"Analyzed the existing Monitoring Requirements Gathering process and applied skills gained in other rotations to streamline the process"
+                     }
+                  ]
                },
                {
-                  "division":"Enterprise Monitoring, ECAP",
-                  "jobTitle":"Systems Management Engineer",
-                  "type":"General",
-                  "description":"Analyzed the existing Monitoring Requirements Gathering process and applied skills gained in other rotations to streamline the process"
-               },
-               {
-                  "division":"IBIT, Annuities",
                   "jobTitle":"Application Developer",
-                  "type":"General",
-                  "description":"Converted VB6 applications (ACATS, DAC Extract, Role Change, Special Programs) to C# .NET while reducing redundant code and incorporating fixes for the identified bugs/defects "
+                  "division":"IBIT, Annuities",
+                  "keyContributions":[
+                     {
+                        "type":"General",
+                        "description":"Converted VB6 applications (ACATS, DAC Extract, Role Change, Special Programs) to C# .NET while reducing redundant code and incorporating fixes for the identified bugs/defects"
+                     }
+                  ]
                },
                {
-                  "division":"IBIT, Broker Dealer",
                   "jobTitle":"Quality Assurance Analyst",
-                  "type":"General",
-                  "description":"Acted as QA Lead for Manually Entered Transactions project for all QA aspects including test planning, test scripting, test execution, defect management, project meetings, & UAT coordination"
-               },
-               {
                   "division":"IBIT, Broker Dealer",
-                  "jobTitle":"Quality Assurance Analyst",
-                  "type":"General",
-                  "description":"Participated in meetings with vendors to accurately explain and demonstrate functionality issues with their products to ensure that showstopper defects for the Straight-Thru-Processing initiative would be addressed properly"
+                  "keyContributions":[
+                     {
+                        "type":"General",
+                        "description":"Acted as QA Lead for Manually Entered Transactions project for all QA aspects including test planning, test scripting, test execution, defect management, project meetings, & UAT coordination"
+                     },
+                     {
+                        "type":"General",
+                        "description":"Participated in meetings with vendors to accurately explain and demonstrate functionality issues with their products to ensure that showstopper defects for the Straight-Thru-Processing initiative would be addressed properly"
+                     },
+                     {
+                        "type":"General",
+                        "description":"Reduced the amount of time needed for regression testing by automating testing scripts in Quick Test Pro"
+                     }
+                  ]
                },
                {
-                  "division":"IBIT, Broker Dealer",
-                  "jobTitle":"Quality Assurance Analyst",
-                  "type":"General",
-                  "description":"Reduced the amount of time needed for regression testing by automating testing scripts in Quick Test Pro"
-               },
-               {
-                  "division":"Institutional IT, Corporate Benefit Funding",
                   "jobTitle":"Business Systems Analyst",
-                  "type":"General",
-                  "description":"Analyzed  application impacts of various strategic initiatives such as SDI and LiveLink Hardening and coordinated the necessary changes to keep all environments operating and minimize impact to our project plan"
+                  "division":"Institutional IT, Corporate Benefit Funding",
+                  "keyContributions":[
+                     {
+                        "type":"General",
+                        "description":"Analyzed  application impacts of various strategic initiatives such as SDI and LiveLink Hardening and coordinated the necessary changes to keep all environments operating and minimize impact to our project plan"
+                     }
+                  ]
                }
             ]
          },
@@ -207,51 +219,89 @@
          }
       ],
       "proficiencies":[
-        {"type":"Software", "description":"Visual Studio 2005, 2008, 2010, 2012, 2013"}, 
-{"type":"Software", "description":"SQL Server - 2005, 2008"},
-{"type":"Software", "description":"GITHub"},
-{"type":"Software", "description":"RedGate SQL Development Tools"},
-{"type":"Software", "description":"StarTeam"},
-{"type":"Software", "description":"Team Foundation Server"},
-{"type":"Software", "description":"Jenkins"},
-{"type":"Software", "description":"ASP.net"},
-{"type":"Language", "description":"C#"},
-{"type":"Technology", "description":"WCF Web Services"},
-{"type":"Language", "description":"jQuery"},
-{"type":"Technology", "description":"AJAX"},
-{"type":"Technology", "description":"MVC"}
-         
+         {
+            "type":"Software",
+            "description":"Visual Studio 2005, 2008, 2010, 2012, 2013"
+         },
+         {
+            "type":"Software",
+            "description":"SQL Server - 2005, 2008"
+         },
+         {
+            "type":"Software",
+            "description":"GITHub"
+         },
+         {
+            "type":"Software",
+            "description":"RedGate SQL Development Tools"
+         },
+         {
+            "type":"Software",
+            "description":"StarTeam"
+         },
+         {
+            "type":"Software",
+            "description":"Team Foundation Server"
+         },
+         {
+            "type":"Software",
+            "description":"Jenkins"
+         },
+         {
+            "type":"Software",
+            "description":"ASP.net"
+         },
+         {
+            "type":"Language",
+            "description":"C#"
+         },
+         {
+            "type":"Technology",
+            "description":"WCF Web Services"
+         },
+         {
+            "type":"Language",
+            "description":"jQuery"
+         },
+         {
+            "type":"Technology",
+            "description":"AJAX"
+         },
+         {
+            "type":"Technology",
+            "description":"MVC"
+         }
       ],
       "training":[
          {
-		"name":"Managing IT Projects",
-		"description":"ESI Accredited course covering the critical success factors and risks inherent to IT projects, as well as managing the project plan, the team, and estimating project costs and schedules"
+            "name":"Managing IT Projects",
+            "description":"ESI Accredited course covering the critical success factors and risks inherent to IT projects, as well as managing the project plan, the team, and estimating project costs and schedules"
          },
- {
-		"name":"Establishing a Business Mindset",
-		"description":"ESI Accredited course covering the importance of developing the necessary business acumen to understand the implications when making business decisions"
+         {
+            "name":"Establishing a Business Mindset",
+            "description":"ESI Accredited course covering the importance of developing the necessary business acumen to understand the implications when making business decisions"
          }
       ],
       "awards":[
          {
-		"description":"ITG Quarterly award winner for work on Annuity Host Conversion"
+            "description":"ITG Quarterly award winner for work on Annuity Host Conversion"
          },
- {
-		"description":"Recognized for exemplary work by peers nine times through the Global Technology Recognition program"
+         {
+            "description":"Recognized for exemplary work by peers nine times through the Global Technology Recognition program"
          }
       ]
    },
    "education":{
-	"college":{
-		"name":"Rutgers University, The State University of New Jersey",
-		"graduationDate":"05/2007",
-		"degree":"Bachelor of Arts",
-		"major":"Information Technology and Informatics",
-		"minor":"Economics",
-		"gpa":{
-			"major":3.86,
-			"cumulative":3.23
-			}
-	}
+      "college":{
+         "name":"Rutgers University, The State University of New Jersey",
+         "graduationDate":"05/2007",
+         "degree":"Bachelor of Arts",
+         "major":"Information Technology and Informatics",
+         "minor":"Economics",
+         "gpa":{
+            "major":3.86,
+            "cumulative":3.23
+         }
+      }
    }
 }
