@@ -36,6 +36,7 @@ namespace DomDeMaioHomePage.Translators
                 outputJob.Company = inputJob.Company;
                 outputJob.StartDate = StringToDate(inputJob.StartDate);
                 outputJob.EndDate = StringToDate(inputJob.EndDate);
+<<<<<<< HEAD
                 outputJob.Description = inputJob.Description;
                 
                 if(inputJob.RotationalJob != null && inputJob.RotationalJob.Length > 0)
@@ -68,6 +69,16 @@ namespace DomDeMaioHomePage.Translators
 
                         outputJob.Contributions.Add(outputContribution);
                     }
+=======
+
+                foreach(var inputContrb in inputJob.KeyContributions)
+                {
+                    Contribution outputContribution = new Contribution();
+                    outputContribution.Type = inputContrb.Type;
+                    outputContribution.Description = inputContrb.Description;
+                    outputContribution.Benefit = inputContrb.Benefit;
+                    outputJob.Contributions.Add(outputContribution);
+>>>>>>> parent of 998967c... Updates to styles and layout
                 }
                 output.ProfessionalExperience.Jobs.Add(outputJob);
             }

@@ -1,0 +1,190 @@
+﻿@model DomDeMaioHomePage.Models.Resume
+
+
+@{
+    ViewBag.Title = "Dom DeMaio Resume";
+}
+
+
+@*<div class="hero-unit">
+    <p class="text-warning">
+        @Model.Person.FirstName
+        @Model.Person.LastName -
+        @Model.Person.EMailAddress
+    </p>
+</div>*@
+<div class="hero-unit">
+    <h3>Professional Experience</h3>
+    @foreach (var job in @Model.ProfessionalExperience.Jobs)
+    {
+        <div class="row-fluid">
+            <div class="span8">
+                <h5 class="text-info"><em>@job.Title - @job.Company -  @job.Address.City, @job.Address.State</em></h5>
+            </div>
+            <div class="span4">
+                <h5 class="text-info">@job.StartDate - @job.EndDate</h5>
+            </div>
+        </div>
+
+        <ul class="list-unstyled">
+            @foreach (var contribution in @job.Contributions)
+            {
+
+                <li>
+                    <small> @contribution.Description</small>
+                    @if (!string.IsNullOrWhiteSpace(@contribution.Benefit))
+                    {
+                        <ul>
+                            <li>
+                                <small>@contribution.Benefit</small>
+                            </li>
+                        </ul>
+                    }
+                </li>
+            }
+        </ul>
+    }
+
+</div>
+@*<div class="hero-unit">
+        <h3>
+            Proficiencies, Training, &amp; Awards
+        </h3>
+        <dl class="dl-horizontal">
+            <dt>
+                Software
+            </dt>
+            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+            {
+                if (@skill.Type.Equals("Software"))
+                {
+            <dd>@skill.Description</dd>
+
+                }
+            }
+
+        </dl>
+
+        <dl class="dl-horizontal">
+            <dt>
+                Technology
+            </dt>
+
+            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+                {
+                    if (@skill.Type.Equals("Technology"))
+                    {
+            <dd>@skill.Description</dd>
+
+                    }
+                }
+        </dl>
+
+        <dl class="dl-horizontal">
+            <dt>
+                Languages
+            </dt>
+
+            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+                {
+                    if (@skill.Type.Equals("Language"))
+                    {
+            <dd>@skill.Description</dd>
+
+                    }
+                }
+
+        </dl>
+
+
+    </div>*@
+
+
+<div class="hero-unit">
+    <h3>
+        Proficiencies, Training, &amp; Awards
+    </h3>
+    <h4>Proficiencies</h4>
+    <div class="row-fluid">
+        <div class="span2">
+            Software
+        </div>
+        <div class="span10">
+            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+            {
+                if (@skill.Type.Equals("Software"))
+                {
+                    <span>&bull; @skill.Description</span>
+
+                }
+            }
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span2">
+            Technology
+        </div>
+        <div class="span10">
+            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+            {
+                if (@skill.Type.Equals("Technology"))
+                {
+                    <span>&bull; @skill.Description</span>
+
+                }
+            }
+        </div>
+    </div>
+
+    <div class="row-fluid">
+
+        <div class="span2">
+           Languages
+        </div>
+        <div class="span10">
+            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+            {
+                if (@skill.Type.Equals("Language"))
+                {
+                    <span>&bull; @skill.Description</span>
+
+                }
+            }
+        </div>
+    </div>
+    <h4>Training</h4>
+    <ul>
+        @foreach (var trainingClass in @Model.ProfessionalExperience.Trainings)
+        {
+               <li>@trainingClass.Name - @trainingClass.Description</li>
+        }
+    </ul>
+   
+
+    <h4>Recognition</h4>
+    <ul>
+        @foreach (var award in @Model.ProfessionalExperience.Awards)
+        {
+            <li>@award.Description</li>
+
+        }
+    </ul>
+</div>
+
+
+
+<div class="hero-unit">
+    <h3>Education</h3>
+    @foreach (var college in Model.Education.Colleges)
+    {
+    <ul>
+        <li>@college.Name</li>
+        <li>Graduation Date - @college.GraduationDate</li>
+        <li>Degree - @college.Degree in @college.Major</li>
+        <li>Minor - @college.Minor</li>
+        <li>GPA - Major:@college.MajorGpa - Cumulative:@college.CumulativeGpa</li>
+    </ul>
+    }
+
+</div>

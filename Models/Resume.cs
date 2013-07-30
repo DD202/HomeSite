@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -101,20 +100,20 @@ namespace DomDeMaioHomePage.Models
         public string Title { get; set; }
         public Address Address { get; set; }
         public string Company { get; set; }
-        [DisplayFormat(DataFormatString="{0:MMM yyyy}")]
         public DateTime? StartDate { get; set; }
-        [DisplayFormat(DataFormatString = "{0:MMM yyyy}")]
         public DateTime? EndDate { get; set; }
+<<<<<<< HEAD
         public string Description { get; set; }
         public List<Contribution> Contributions { get; set; }
         public List<RotationalJob> RotationalJobs { get; set; }
+=======
+        public List<Contribution> Contributions { get; set; } 
+>>>>>>> parent of 998967c... Updates to styles and layout
         #endregion
     }
 
     public class Contribution
     {
-        public string Division { get; set; }
-        public string JobTitle { get; set; }
         public string Type { get; set; }
         public string Description { get; set; }
         public string Benefit { get; set; }
