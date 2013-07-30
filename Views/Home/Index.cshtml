@@ -9,7 +9,7 @@
     @foreach (var job in @Model.ProfessionalExperience.Jobs)
     {
         <div class="row-fluid">
-            <div class="span9">
+            <div class="span8">
                 <h5 class="text-info">
                     <em>
                         @job.Title - @job.Company -  @job.Address.City@if (!string.IsNullOrWhiteSpace(@job.Address.State))
@@ -17,7 +17,7 @@
                     </em>
                 </h5>
             </div>
-            <div class="span3">
+            <div class="span4">
                 <h5 class="text-right">
                     <span class="text-info">
                         @job.StartDate.Value.ToString("MM/yyyy") - @if (job.EndDate.HasValue)
