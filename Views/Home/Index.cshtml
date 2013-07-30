@@ -1,47 +1,171 @@
-﻿
+﻿@model DomDeMaioHomePage.Models.Resume
+
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Dom DeMaio Resume";
 }
+<div>
+    <h3 id="professional">Professional Experience</h3>
+    @foreach (var job in @Model.ProfessionalExperience.Jobs)
+    {
+        <div class="row-fluid">
+            <div class="span9">
+                <h5 class="text-info">
+                    <em>
+                        @job.Title - @job.Company -  @job.Address.City@if (!string.IsNullOrWhiteSpace(@job.Address.State))
+                        {<text>, @job.Address.State </text>}
+                    </em>
+                </h5>
+            </div>
+            <div class="span3">
+                <h5 class="text-right">
+                    <span class="text-info">
+                        @job.StartDate.Value.ToString("MM/yyyy") - @if (job.EndDate.HasValue)
+                        {  @job.EndDate.Value.ToString("MM/yyyy");
+                        }
+                        else
+                        {<span>Present</span>}
+                    </span>
+                </h5>
+            </div>
+        </div>
+        if (!string.IsNullOrWhiteSpace(job.Description))
+        {
+            <p class="text-warning"><small>@job.Description</small></p>
+        }
 
-@section featured {
-    <div class="hero-unit">
-        <h1>@ViewBag.Title.</h1>
-        <h2>Testing H2</h2>
 
-        <p>
-            To learn more about ASP.NET MVC visit
-            <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-            The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-            If you have any questions about ASP.NET MVC visit
-        </p>
-        <a class="btn btn-large btn-success" href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
+
+        if (!string.IsNullOrEmpty(job.Contributions[0].Division))
+        {
+            string previousContribution = string.Empty;
+            foreach (var contribution in job.Contributions)
+            {
+
+                if (!string.IsNullOrWhiteSpace(contribution.Division)
+                    && !previousContribution.Equals(contribution.Division))
+                {
+                    <small class="text-warning">@contribution.Division - @contribution.JobTitle</small>
+                    previousContribution = contribution.Division;
+
+                }
+                <ul>
+                    <li>
+                        <small> @contribution.Description</small>
+                        @if (!string.IsNullOrWhiteSpace(@contribution.Benefit))
+                        {
+                            <ul>
+                                <li>
+                                    <small>@contribution.Benefit</small>
+                                </li>
+                            </ul>
+                        }
+                    </li>
+                </ul>
+            }
+        }
+        else
+        {
+            <ul class="">
+                @foreach (var contribution in @job.Contributions)
+                {
+                    <li>
+                        <small> @contribution.Description</small>
+                        @if (!string.IsNullOrWhiteSpace(@contribution.Benefit))
+                        {
+                            <ul>
+                                <li>
+                                    <small>@contribution.Benefit</small>
+                                </li>
+                            </ul>
+                        }
+                    </li>
+
+                }
+            </ul>
+        }
+    }
+    <hr />
+    <h3 id="proficiencies">
+        Proficiencies, Training, &amp; Awards
+    </h3>
+    <h4 class="text-info">Proficiencies</h4>
+    <div class="row-fluid">
+        <div class="span2">
+            <small>Software</small>
+        </div>
+        <div class="span10">
+            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+            {
+                if (@skill.Type.Equals("Software"))
+                {
+                    <span><small>&bull; @skill.Description</small></span>
+
+                }
+            }
+        </div>
     </div>
-}
-<!-- Example row of columns -->
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Getting Started</h2>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards.
-        <p><a class="btn" href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more &raquo;</a></p>
+
+    <div class="row-fluid">
+        <div class="span2">
+            <small>Technology</small>
+        </div>
+        <div class="span10">
+            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+            {
+                if (@skill.Type.Equals("Technology"))
+                {
+                    <span><small>&bull; @skill.Description</small></span>
+
+                }
+            }
+        </div>
     </div>
-    <div class="span4">
-        <h2>Add NuGet packages and jump-start your coding</h2>
-        <p>NuGet makes it easy to install and update free libraries and tools.</p>
-        <p><a class="btn" href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more &raquo;</a></p>
+
+    <div class="row-fluid">
+
+        <div class="span2">
+            <small>Languages</small>
+        </div>
+        <div class="span10">
+            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+            {
+                if (@skill.Type.Equals("Language"))
+                {
+                    <span><small>&bull; @skill.Description</small></span>
+
+                }
+            }
+        </div>
     </div>
-    <div class="span4">
-        <h2>Find Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn" href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more &raquo;</a></p>
-    </div>
-    
+    <h4 class="text-info">Training</h4>
+    <ul>
+        @foreach (var trainingClass in @Model.ProfessionalExperience.Trainings)
+        {
+            <li><small>@trainingClass.Name - @trainingClass.Description</small></li>
+        }
+    </ul>
+
+
+    <h4 class="text-info">Recognition</h4>
+    <ul>
+        @foreach (var award in @Model.ProfessionalExperience.Awards)
+        {
+            <li><small>@award.Description</small></li>
+
+        }
+    </ul>
+    <hr />
+    <h3 id="education">Education</h3>
+    @foreach (var college in Model.Education.Colleges)
+    {
+        <ul>
+            <li><small>@college.Name</small></li>
+            <li><small>Graduation Date - @college.GraduationDate</small></li>
+            <li><small>Degree - @college.Degree in @college.Major</small></li>
+            <li><small>Minor - @college.Minor</small></li>
+            <li><small>GPA - Major:@college.MajorGpa - Cumulative:@college.CumulativeGpa</small></li>
+        </ul>
+    }
+
 </div>
-<blockquote>Testing Out the BlockQuote</blockquote>
-
-<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
-<code>&lt;Div&gt;Testing Out OSme Code &lt;/Div&gt;</code> 
