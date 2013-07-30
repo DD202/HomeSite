@@ -33,36 +33,51 @@
         {
             <p class="text-warning"><small>@job.Description</small></p>
         }
-        
-            <ul class="">
-                @foreach (var contribution in @job.Contributions)
+        if (job.RotationalJobs != null && job.RotationalJobs.Count > 0)
+        {
+            foreach (var rotation in job.RotationalJobs)
+            {
+                <small class="text-warning">@rotation.Division <text> - </text> @rotation.JobTitle</small>
+                    <ul>
+                        @foreach(var contribution in rotation.Contributions)
+                    {
+                            <li><small> @contribution.Description</small></li>
+                    }
+                    </ul>
+                    }
+                    }
+                    if (job.Contributions != null && job.Contributions.Count > 0)
+                    {
+                    <ul class="">
+                        @foreach (var contribution in @job.Contributions)
                 {
-                    <li>
-                        <small> @contribution.Description</small>
-                        @if (!string.IsNullOrWhiteSpace(@contribution.Benefit))
+                            <li>
+                                <small> @contribution.Description</small>
+                                @if (!string.IsNullOrWhiteSpace(@contribution.Benefit))
                         {
-                            <ul>
-                                <li>
-                                    <small>@contribution.Benefit</small>
-                                </li>
-                            </ul>
+                                    <ul>
+                                        <li>
+                                            <small>@contribution.Benefit</small>
+                                        </li>
+                                    </ul>
                         }
-                    </li>
+                            </li>
 
                 }
-            </ul>
-        }
-       <hr />
-    <h3 id="proficiencies">
-        Proficiencies, Training, &amp; Awards
-    </h3>
-    <h4 class="text-info">Proficiencies</h4>
-    <div class="row-fluid">
-        <div class="span2">
-            <small>Software</small>
-        </div>
-        <div class="span10">
-            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+                    </ul>
+                    }
+                    }
+                    <hr />
+                    <h3 id="proficiencies">
+                        Proficiencies, Training, &amp; Awards
+                    </h3>
+                    <h4 class="text-info">Proficiencies</h4>
+                    <div class="row-fluid">
+                        <div class="span2">
+                            <small>Software</small>
+                        </div>
+                        <div class="span10">
+                            @foreach (var skill in @Model.ProfessionalExperience.Skills)
             {
                 if (@skill.Type.Equals("Software"))
                 {
@@ -70,15 +85,15 @@
 
                 }
             }
-        </div>
-    </div>
+                        </div>
+                    </div>
 
-    <div class="row-fluid">
-        <div class="span2">
-            <small>Technology</small>
-        </div>
-        <div class="span10">
-            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+                    <div class="row-fluid">
+                        <div class="span2">
+                            <small>Technology</small>
+                        </div>
+                        <div class="span10">
+                            @foreach (var skill in @Model.ProfessionalExperience.Skills)
             {
                 if (@skill.Type.Equals("Technology"))
                 {
@@ -86,16 +101,16 @@
 
                 }
             }
-        </div>
-    </div>
+                        </div>
+                    </div>
 
-    <div class="row-fluid">
+                    <div class="row-fluid">
 
-        <div class="span2">
-            <small>Languages</small>
-        </div>
-        <div class="span10">
-            @foreach (var skill in @Model.ProfessionalExperience.Skills)
+                        <div class="span2">
+                            <small>Languages</small>
+                        </div>
+                        <div class="span10">
+                            @foreach (var skill in @Model.ProfessionalExperience.Skills)
             {
                 if (@skill.Type.Equals("Language"))
                 {
@@ -103,36 +118,36 @@
 
                 }
             }
-        </div>
-    </div>
-    <h4 class="text-info">Training</h4>
-    <ul>
-        @foreach (var trainingClass in @Model.ProfessionalExperience.Trainings)
+                        </div>
+                    </div>
+                    <h4 class="text-info">Training</h4>
+                    <ul>
+                        @foreach (var trainingClass in @Model.ProfessionalExperience.Trainings)
         {
-            <li><small>@trainingClass.Name - @trainingClass.Description</small></li>
+                            <li><small>@trainingClass.Name - @trainingClass.Description</small></li>
         }
-    </ul>
+                    </ul>
 
 
-    <h4 class="text-info">Recognition</h4>
-    <ul>
-        @foreach (var award in @Model.ProfessionalExperience.Awards)
+                    <h4 class="text-info">Recognition</h4>
+                    <ul>
+                        @foreach (var award in @Model.ProfessionalExperience.Awards)
         {
-            <li><small>@award.Description</small></li>
+                            <li><small>@award.Description</small></li>
 
         }
-    </ul>
-    <hr />
-    <h3 id="education">Education</h3>
-    @foreach (var college in Model.Education.Colleges)
+                    </ul>
+                    <hr />
+                    <h3 id="education">Education</h3>
+                    @foreach (var college in Model.Education.Colleges)
     {
-        <ul>
-            <li><small>@college.Name</small></li>
-            <li><small>Graduation Date - @college.GraduationDate</small></li>
-            <li><small>Degree - @college.Degree in @college.Major</small></li>
-            <li><small>Minor - @college.Minor</small></li>
-            <li><small>GPA - Major:@college.MajorGpa - Cumulative:@college.CumulativeGpa</small></li>
-        </ul>
+                        <ul>
+                            <li><small>@college.Name</small></li>
+                            <li><small>Graduation Date - @college.GraduationDate</small></li>
+                            <li><small>Degree - @college.Degree in @college.Major</small></li>
+                            <li><small>Minor - @college.Minor</small></li>
+                            <li><small>GPA - Major:@college.MajorGpa - Cumulative:@college.CumulativeGpa</small></li>
+                        </ul>
     }
 
 </div>
