@@ -37,13 +37,16 @@ namespace DomDeMaioHomePage.Translators
                 outputJob.Company = inputJob.Company;
                 outputJob.StartDate = StringToDate(inputJob.StartDate);
                 outputJob.EndDate = StringToDate(inputJob.EndDate);
-
+                outputJob.Description = inputJob.Description;
                 foreach(var inputContrb in inputJob.KeyContributions)
                 {
                     Contribution outputContribution = new Contribution();
                     outputContribution.Type = inputContrb.Type;
                     outputContribution.Description = inputContrb.Description;
                     outputContribution.Benefit = inputContrb.Benefit;
+                    outputContribution.Division = inputContrb.Division;
+                    outputContribution.JobTitle = inputContrb.JobTitle;
+
                     outputJob.Contributions.Add(outputContribution);
                 }
                 output.ProfessionalExperience.Jobs.Add(outputJob);

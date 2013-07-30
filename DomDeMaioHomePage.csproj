@@ -252,6 +252,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_html5shiv.cshtml" />
     <Content Include="Views\Resume\Index.cshtml" />
+    <Content Include="Views\Resume\Resume.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
